@@ -1,0 +1,71 @@
+/* Only what Bootstrap doesn't give us: the theme colours, card sizing and link states. */
+:root {
+  --bg: #141414;
+  --card: #1f1f1f;
+  --button: #333333;
+  --green: #c4f82a;
+}
+
+body {
+  background: var(--bg);
+  color: #fff;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.profile-card {
+  max-width: 327px;
+  padding: 24px;
+  background: var(--card);
+  border-radius: 12px;
+}
+
+.avatar {
+  width: 88px;
+  height: 88px;
+  object-fit: cover;
+  background: var(--button);
+}
+
+.location {
+  color: var(--green);
+}
+
+/* Bootstrap 5.3 buttons are themed through these variables */
+.social-btn {
+  --bs-btn-padding-y: 0.75rem;
+  --bs-btn-font-weight: 700;
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-border-width: 0;
+  --bs-btn-border-radius: 8px;
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--button);
+  --bs-btn-hover-color: var(--bg);
+  --bs-btn-hover-bg: var(--green);
+  --bs-btn-active-color: var(--bg);
+  --bs-btn-active-bg: var(--green);
+  --bs-btn-focus-shadow-rgb: 196, 248, 42;
+}
+
+.social-btn:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+.social-btn:hover:focus-visible {
+  outline-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .profile-card {
+    max-width: 384px;
+    padding: 40px;
+    border-radius: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-btn {
+    transition: none;
+  }
+}
